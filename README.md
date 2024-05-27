@@ -21,18 +21,27 @@
     <button class="theme-toggle" onclick="toggleTheme()">Cambiar a Modo Oscuro</button>
     <div class="container">
         <div class="video-card">
-            <!-- Contenido de videos existentes -->
+            <!-- Contenido del video -->
         </div>
-        <!-- Formulario para subir videos -->
-        <div class="upload-form">
-            <h2>Subir Video</h2>
-            <form>
-                <label for="video-url">URL del Video (YouTube, Vimeo, etc.):</label><br>
-                <input type="url" id="video-url" name="video-url" required><br><br>
-                <label for="video-description">Descripción:</label><br>
-                <textarea id="video-description" name="video-description" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Subir Video</button>
+        <!-- Sección de comentarios generales -->
+        <div class="comments-section">
+            <h2>Comentarios Generales</h2>
+            <!-- Formulario para agregar un comentario -->
+            <form action="comentarios.php" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+                <button type="submit">Enviar Comentario</button>
             </form>
+
+            <!-- Mostrar comentarios existentes -->
+            <div class="comment">
+                <strong>Usuario 1:</strong> Este es un comentario existente.
+            </div>
+            <div class="comment">
+                <strong>Usuario 2:</strong> Este es otro comentario existente.
+            </div>
         </div>
     </div>
     <footer>
@@ -52,4 +61,5 @@
     </script>
 </body>
 </html>
+
 
